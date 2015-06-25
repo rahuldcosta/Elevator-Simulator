@@ -14,6 +14,12 @@ public class Elevator {
 		this.current_pos = current_pos;
 	} 
      
+	public void Up(int current_pos){
+		current_pos++;
+	}
 	
+	public void Down(int current_pos){
+		current_pos--;
+	}
 	
 }
