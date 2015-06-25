@@ -15,6 +15,9 @@ public class Main {
 		
 		e.setCurrent_pos(0);
 		
+		Floor f = new Floor();
+		
+		f.setFloor_no(0);
 		
 
 	}
