@@ -1,9 +1,17 @@
 package elevatorse2015;
 
+
 public class Elevator {
-//the else
-	public Elevator() {
-		// TODO Auto-generated constructor stub
+     int current_pos ;
+
+	public int getCurrent_pos() {
+		return current_pos;
 	}
 
+	public void setCurrent_pos(int current_pos) {
+		this.current_pos = current_pos;
+	} 
+     
+	
+	
 }
