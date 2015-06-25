@@ -8,6 +8,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		System.out.println("The Elevator Program");
+		
+		Elevator e = new Elevator();
+		
+		e.setCurrent_pos(0);
+		
+		
 
 	}
 
