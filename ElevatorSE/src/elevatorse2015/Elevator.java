@@ -22,4 +22,6 @@ public class Elevator {
 		current_pos--;
 	}
 	
+	//changes added.
+	
 }
