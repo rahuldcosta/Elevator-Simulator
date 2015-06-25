@@ -2,7 +2,7 @@ package elevatorse2015;
 
 public class Floor {
 
-	private int floor_no;
+	public int floor_no;
     FloorButton fb=new FloorButton();
      
   
