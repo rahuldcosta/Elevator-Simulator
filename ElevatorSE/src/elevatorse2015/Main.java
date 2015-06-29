@@ -11,6 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int ff=0;
+	Boolean flag=true;
 		String choice="n";
 		Integer userflr=0;
 		System.out.println("The Elevator Program Started ,Initialized");
@@ -21,10 +22,21 @@ public class Main {
 		Floor f = new Floor();
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Which Floor your on ?");
-		userflr=sc.nextInt();
-	    
+		
+		
+		//Setting user Floor No
 		do{
+		System.out.println("Enter Which Floor your on ?");
+		userflr=sc.nextInt();	
+		
+		if(!(userflr>=0 && userflr<7))
+			System.out.println("Invalid Floor No.");
+		
+		}while(!(userflr>=0 && userflr<7));
+		
+		
+//Infinite Elevator Loop
+do{
 			
 			for(int i=0;i<7;i++)
 			{
@@ -48,14 +60,29 @@ public class Main {
 					
 			}
 			
-			System.out.println("Do You Want to GetOff on this Floor ((_Y-Yes || N-No_))");
-			choice=sc.next();
+			if(flag)
+			{
+				flag=false;
+			}
+			else{
+				System.out.println("Do You Want to GetOff on this Floor ((_Y-Yes || N-No_))");
+				choice=sc.next();
+			}
+			
 			
 			if(choice.equals("N")|| choice.equals("n"))
 			{
 				e.ed.closedoor();
 				f.fb.display();
-				ff=f.fb.selectFloor();
+				
+				do{
+					ff=f.fb.selectFloor();
+					
+					if(!(ff>=0 && ff<7))
+						System.out.println("Invalid Floor No.");
+					
+					}while(!(ff>=0 && ff<7));
+				
 				
 				switch(ff)
 				{
@@ -68,13 +95,13 @@ public class Main {
 					System.out.println("ground floor selected");
 					
 					
-					
+					userflr=ff;
 					break;
 	case 1 :
 					
 					
 					System.out.println("your on 1st floor");
-					
+					userflr=ff;
 					break;
 	case 2 :
 		
@@ -82,38 +109,37 @@ public class Main {
 		System.out.println("your on 2nd floor");
 		
 		
-		
+		userflr=ff;
 		break;
 	case 3 :
 		
 		
 		System.out.println("your on 3rd floor");
 		
-		
+		userflr=ff;
 		break;
 	case 4 :
 		
 		
 		System.out.println("your on 4th floor");
-		
+		userflr=ff;
 		break;
 	case 5 :
 		
 		
 		System.out.println("your on 5th floor");
-		
+		userflr=ff;
 		break;
 	case 6 :
 		
 		
 		System.out.println("your on 6th floor");
-		
+		userflr=ff;
 		break;
 		
-		default :  System.out.println("Invalid Floor Choice,Retry");
 		
 				}
-				userflr=ff;
+				
 				//if(ff==0)
 				//e.current_pos=ff;	
 				//System.out.println(ff);
@@ -131,7 +157,7 @@ public class Main {
 			
 		}
 		while(1==1);
-		
+
 		
 		//comment.
 
