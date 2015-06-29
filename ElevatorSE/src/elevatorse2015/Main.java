@@ -124,6 +124,7 @@ public class Main {
 			else if (choice.equals("Y")|| choice.equals("y"))
 			{
 				System.out.println("Elevator Program Ended");
+				e.ed.closedoor();
 				break;
 			}
 			
