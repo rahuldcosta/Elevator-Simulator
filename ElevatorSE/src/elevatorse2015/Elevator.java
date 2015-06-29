@@ -6,6 +6,13 @@ public class Elevator {
      
      ElevatorDoor ed;
 
+     
+     public Elevator(){
+ 		//display();
+    	 current_pos=0;
+    	 ed= new ElevatorDoor();
+    	 ed.closedoor();
+ 	}
 	public int getCurrent_pos() {
 		return current_pos;
 	}

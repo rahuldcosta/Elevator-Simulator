@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FloorButton {
 
 	public FloorButton(){
-		display();
+		//display();
 	}
 	
 	public int selectFloor(){
@@ -16,8 +16,8 @@ public class FloorButton {
 	
 	public void display(){
 		System.out.println("Select Floor you want to go");
-		System.out.println("1	2	3");
-		System.out.println("4	5	6");
+		System.out.println("0(Grnd)	1	2	3");
+		System.out.println("	4	5	6");
 	
 	}
 	

@@ -13,17 +13,15 @@ public class Main {
 		
 		Elevator e = new Elevator();
 		
-		e.setCurrent_pos(0);
-		
-		e.ed.closedoor();
 		
 		Floor f = new Floor();
 		
-		f.setFloor_no(0);
+	
 		
 		
 		f.fb.display();
 		ff=f.fb.selectFloor();
+		System.out.println(ff);
 		e.getCurrent_pos();
 		
 		//comment.

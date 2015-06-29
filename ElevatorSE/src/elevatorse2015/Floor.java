@@ -3,9 +3,13 @@ package elevatorse2015;
 public class Floor {
 
 	public int floor_no;
-    FloorButton fb=new FloorButton();
+    FloorButton fb;
      
-  
+    public Floor(){
+		//display();
+    	floor_no=0;
+    	fb=new FloorButton();
+	}
 
 	public int getFloor_no() {
 		return floor_no;
