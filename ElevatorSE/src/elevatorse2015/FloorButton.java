@@ -15,7 +15,7 @@ public class FloorButton {
 	}
 	
 	public void display(){
-		System.out.println("Select Floor you want to go");
+		System.out.println("Select Floor No to go to");
 		System.out.println("||===============================||");
 		System.out.println("||0(Grnd)	1  2  3  4  5  6 ||");
 		System.out.println("||===============================||");

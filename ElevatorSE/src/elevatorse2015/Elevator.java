@@ -11,7 +11,7 @@ public class Elevator {
  		//display();
     	 current_pos=0;
     	 ed= new ElevatorDoor();
-    	 ed.closedoor();
+    	
  	}
 	public int getCurrent_pos() {
 		return current_pos;
@@ -22,11 +22,11 @@ public class Elevator {
 	} 
      
 	public void Up(int current_pos){
-		current_pos++;
+		this.current_pos++;
 	}
 	
 	public void Down(int current_pos){
-		current_pos--;
+		this.current_pos--;
 	}
 	
 	//changes added.
