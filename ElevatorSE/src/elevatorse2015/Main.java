@@ -10,8 +10,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		int elevatorno=0;
-		
-		ElevatorSytem es= new ElevatorSytem();
+		int floors=8;
+		ElevatorSytem es= new ElevatorSytem(floors);
 		
 		while (1==1) {
 			

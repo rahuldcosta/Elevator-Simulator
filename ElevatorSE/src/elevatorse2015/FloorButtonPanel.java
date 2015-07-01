@@ -11,7 +11,7 @@ public class FloorButtonPanel {
 	}
 	
 
-public int whichfloor() {
+public int whichfloor(int limit) {
     	
     	
     	Scanner sc=new Scanner(System.in);
@@ -22,10 +22,10 @@ public int whichfloor() {
 		System.out.println("[Waiting]Enter Which Floor your on ?");
 		floorch=sc.nextInt();	
 		
-		if(!(floorch>=0 && floorch<7))
+		if(!(floorch>=0 && floorch<limit))
 			System.out.println("Invalid Floor No.");
 		
-		}while(!(floorch>=0 && floorch<7));
+		}while(!(floorch>=0 && floorch<limit));
     	return floorch;
     }
 	

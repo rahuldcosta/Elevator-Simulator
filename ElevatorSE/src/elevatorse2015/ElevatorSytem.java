@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class ElevatorSytem {
 
 	private Floor f = new Floor();
-	private Elevator e = new Elevator();
+	private Elevator e ;
 	
 	
-	public ElevatorSytem() {
+	public ElevatorSytem(int ct) {
 		// TODO Auto-generated constructor stub
+		e = new Elevator(ct);
 		System.out.println("The Elevator Program Started ,Initialized");
 		
 	}
 
 	public int UserfloorSelection(){
 
-		return f.fb.whichfloor();
+		return f.fb.whichfloor(e.nooffloors);
 	}
 	
 	
@@ -31,7 +32,7 @@ public class ElevatorSytem {
 		Scanner sc=new Scanner(System.in);
 do{
 			
-			for(int i=0;i<7;i++)
+			for(int i=0;i<e.nooffloors;i++)
 			{
 				
 				if(e.getCurrent_pos()<userflr)
@@ -71,67 +72,14 @@ do{
 				do{
 					ff=e.selectFloor();
 					
-					if(!(ff>=0 && ff<7))
+					if(!(ff>=0 && ff<e.nooffloors))
 						System.out.println("Invalid Floor No.");
 					
-					}while(!(ff>=0 && ff<7));
+					}while(!(ff>=0 && ff<e.nooffloors));
+				
+				userflr=this.floormsg(ff);
 				
 				
-				switch(ff)
-				{
-				 
-				case 0 :
-					
-					if(e.getCurrent_pos()==0)
-						System.out.println("your  already on ground floor");
-					else
-					System.out.println("ground floor selected");
-					
-					
-					userflr=ff;
-					break;
-	case 1 :
-					
-					
-					System.out.println("your on 1st floor");
-					userflr=ff;
-					break;
-	case 2 :
-		
-		
-		System.out.println("your on 2nd floor");
-		
-		
-		userflr=ff;
-		break;
-	case 3 :
-		
-		
-		System.out.println("your on 3rd floor");
-		
-		userflr=ff;
-		break;
-	case 4 :
-		
-		
-		System.out.println("your on 4th floor");
-		userflr=ff;
-		break;
-	case 5 :
-		
-		
-		System.out.println("your on 5th floor");
-		userflr=ff;
-		break;
-	case 6 :
-		
-		
-		System.out.println("your on 6th floor");
-		userflr=ff;
-		break;
-		
-		
-				}
 				
 				//if(ff==0)
 				//e.current_pos=ff;	
@@ -154,5 +102,33 @@ do{
 
 		return e.getCurrent_pos();
 	}
+	
+
+	public int floormsg(int ff){
+		
+		
+		
+		for (int i = 0; i < e.nooffloors; i++) {
+			
+			if(i==ff)
+			{	if (e.getCurrent_pos() == ff)
+				System.out.println("your  already on floor "+i);
+			else
+				System.out.println(" floor no "+i+" is selected");
+			return ff;
+			}
+		}
+		return -99;
+	}
+		
+		
+
+
+
+		
+		
+	
+	
+	
 
 }
