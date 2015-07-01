@@ -70,7 +70,7 @@ do{
 				e.displayElevatorPanel();
 				
 				do{
-					ff=e.selectFloor();
+					ff=e.selectDestFloor();
 					
 					if(!(ff>=0 && ff<e.nooffloors))
 						System.out.println("Invalid Floor No.");

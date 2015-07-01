@@ -35,7 +35,7 @@ public class Elevator {
 	}
 	
 	
-	public int selectFloor(){
+	public int selectDestFloor(){
 		Scanner in=new Scanner(System.in);
 	    int floor=in.nextInt();
 	    return floor;
@@ -43,7 +43,7 @@ public class Elevator {
 	
 	
 	public void displayElevatorPanel(){
-		System.out.println("Select Floor No to go to");
+		System.out.println("Select Destination Floor");
 		System.out.println("||===============================||");
 		System.out.printf("||0(Grnd)");
 		
