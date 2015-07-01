@@ -12,7 +12,7 @@ public class ElevatorSytem {
 		
 	}
 
-	public int Userfloor(){
+	public int UserfloorSelection(){
 		
 		Floor f = new Floor();
 		
@@ -23,11 +23,14 @@ public class ElevatorSytem {
 	public int simulateelevator(Integer userflr,int elevatorno)
 	{
 		Elevator e = new Elevator();
-		e.setCurrent_pos(elevatorno);		
+				
 		Floor f = new Floor();
+		
+		
 		int ff=0;
 		Boolean flag=true;
 		String choice="n";
+		e.setCurrent_pos(elevatorno);
 		
 		Scanner sc=new Scanner(System.in);
 do{
