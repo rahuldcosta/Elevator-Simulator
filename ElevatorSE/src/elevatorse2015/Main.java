@@ -9,11 +9,14 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
+		int elevatorno=0;
 		
 		ElevatorSytem es= new ElevatorSytem();
-		Integer floorch=es.Userfloor();
 		
-		es.simulateelevator(floorch);
+		while (1==1) {
+			Integer floorch = es.Userfloor();
+			elevatorno = es.simulateelevator(floorch, elevatorno);
+		}
 
 	}
 

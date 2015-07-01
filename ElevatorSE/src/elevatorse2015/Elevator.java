@@ -1,16 +1,18 @@
 package elevatorse2015;
 
 
+
+
 public class Elevator {
      int current_pos ;
      
-     ElevatorDoor ed;
+     ElevatorDoorContext ed;
 
      
      public Elevator(){
  		//display();
     	 current_pos=0;
-    	 ed= new ElevatorDoor();
+    	 ed= new ElevatorDoorContext(new CloseDoor());
     	
  	}
 	public int getCurrent_pos() {

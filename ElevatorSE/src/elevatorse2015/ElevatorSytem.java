@@ -4,45 +4,27 @@ import java.util.Scanner;
 
 public class ElevatorSytem {
 
-	Elevator e = new Elevator();
 	
-	
-	Floor f = new Floor();
-	
-		
-		
-		
 	
 	public ElevatorSytem() {
 		// TODO Auto-generated constructor stub
-		
-		
-		
-		
 		System.out.println("The Elevator Program Started ,Initialized");
 		
 	}
 
 	public int Userfloor(){
-		Scanner sc=new Scanner(System.in);
-		int floorch=0;
 		
-		//Setting user Floor No
-		do{
-		System.out.println("Enter Which Floor your on ?");
-		floorch=sc.nextInt();	
+		Floor f = new Floor();
 		
-		if(!(floorch>=0 && floorch<7))
-			System.out.println("Invalid Floor No.");
-		
-		}while(!(floorch>=0 && floorch<7));
-		
-		return floorch;
+		return f.whichfloor();
 	}
 	
 	
-	public void simulateelevator(Integer userflr)
+	public int simulateelevator(Integer userflr,int elevatorno)
 	{
+		Elevator e = new Elevator();
+		e.setCurrent_pos(elevatorno);		
+		Floor f = new Floor();
 		int ff=0;
 		Boolean flag=true;
 		String choice="n";
@@ -66,7 +48,7 @@ do{
 				{	
 					
 					System.out.println("Elevator has Reached "+e.getCurrent_pos()+" Floor");
-					e.ed.opendoor();
+					e.ed.switchState();
 					break; }
 				
 					
@@ -84,7 +66,7 @@ do{
 			
 			if(choice.equals("N")|| choice.equals("n"))
 			{
-				e.ed.closedoor();
+				e.ed.switchState();
 				f.fb.display();
 				
 				do{
@@ -161,14 +143,17 @@ do{
 			}
 			else if (choice.equals("Y")|| choice.equals("y"))
 			{
-				System.out.println("Elevator Program Ended");
-				e.ed.closedoor();
+				System.out.println("Thank You For Using the Elevator");
+				e.ed.switchState();
 				break;
 			}
 			
 			
 		}
 		while(1==1);
+
+
+		return e.getCurrent_pos();
 	}
 
 }
