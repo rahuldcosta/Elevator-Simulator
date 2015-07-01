@@ -15,16 +15,7 @@ public class Main {
 		
 		ElevatorSytem es= new ElevatorSytem(floors);
 		
-//		while (1==1) {
-//			
-//			
-//			Integer floorch = es.UserfloorSelection();
-//			
-//			
-//			elevatorno = es.simulateelevator(floorch, elevatorno);
-//		}
-		
-		
+
 		
 		
 		//format  ==>es.simulateelevator(floorch, elevatorno,destno);
@@ -57,6 +48,21 @@ public class Main {
 		es.simulateelevator(0, 5,0);
 		
 
+		
+		
+		
+		
+		
+//		while (1==1) {
+//		
+//		
+//		Integer floorch = es.UserfloorSelection();
+//		
+//		
+//		elevatorno = es.simulateelevator(floorch, elevatorno);
+//	}
+	
+	
 	}
 
 }
