@@ -21,7 +21,7 @@ public class ElevatorSytem {
 	}
 	
 	
-	public int simulateelevator(Integer userflr,int elevatorno)
+	public int simulateelevator(Integer userflr,int elevatorno,int destfloor)
 	{
 
 		int ff=0;
@@ -59,18 +59,22 @@ do{
 				flag=false;
 			}
 			else{
-				System.out.println("Do You Want to GetOff on this Floor ((_Y-Yes || N-No_))");
-				choice=sc.next();
+			//	System.out.println("Do You Want to GetOff on this Floor ((_Y-Yes || N-No_))");
+				//choice=sc.next();
+				
+				choice="y";
 			}
 			
 			
 			if(choice.equals("N")|| choice.equals("n"))
 			{
 				e.ed.switchState();
-				e.displayElevatorPanel();
+				//e.displayElevatorPanel();
 				
 				do{
-					ff=e.selectDestFloor();
+					
+					//ff=e.selectDestFloor();
+					ff=destfloor;
 					
 					if(!(ff>=0 && ff<e.nooffloors))
 						System.out.println("Invalid Floor No.");
