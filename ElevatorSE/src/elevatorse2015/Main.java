@@ -14,7 +14,11 @@ public class Main {
 		ElevatorSytem es= new ElevatorSytem();
 		
 		while (1==1) {
+			
+			
 			Integer floorch = es.UserfloorSelection();
+			
+			
 			elevatorno = es.simulateelevator(floorch, elevatorno);
 		}
 

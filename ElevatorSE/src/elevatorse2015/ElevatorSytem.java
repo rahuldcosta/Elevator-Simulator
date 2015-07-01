@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ElevatorSytem {
 
+	private Floor f = new Floor();
+	private Elevator e = new Elevator();
 	
 	
 	public ElevatorSytem() {
@@ -13,20 +15,14 @@ public class ElevatorSytem {
 	}
 
 	public int UserfloorSelection(){
-		
-		Floor f = new Floor();
-		
-		return f.whichfloor();
+
+		return f.fb.whichfloor();
 	}
 	
 	
 	public int simulateelevator(Integer userflr,int elevatorno)
 	{
-		Elevator e = new Elevator();
-				
-		Floor f = new Floor();
-		
-		
+
 		int ff=0;
 		Boolean flag=true;
 		String choice="n";
@@ -70,10 +66,10 @@ do{
 			if(choice.equals("N")|| choice.equals("n"))
 			{
 				e.ed.switchState();
-				f.fb.display();
+				e.displayElevatorPanel();
 				
 				do{
-					ff=f.fb.selectFloor();
+					ff=e.selectFloor();
 					
 					if(!(ff>=0 && ff<7))
 						System.out.println("Invalid Floor No.");
