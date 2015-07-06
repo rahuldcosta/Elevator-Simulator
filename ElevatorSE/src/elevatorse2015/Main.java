@@ -9,6 +9,16 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
+		
+		//Design Patterns
+		//Design Pattern :- Classes Participating in The Design Pattern
+//		1.State:- ElevatorDoorContext,State,OpenDoor,CLoseDoor
+//		2.Composite :- Floor,FloorBttonPanel
+//		3.Facade:- ElevatorSystem,Elevator,Floor
+		
+		
+		
+		
 		int elevatorno=0;
 		int floors=6;
 		
