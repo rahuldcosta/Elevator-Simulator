@@ -15,6 +15,7 @@ public class Main {
 //		1.State:- ElevatorDoorContext,State,OpenDoor,CLoseDoor
 //		2.Composite :- Floor,FloorBttonPanel
 //		3.Facade:- ElevatorSystem,Elevator,Floor
+	  //4.Singleton:- OpenDoor,CloseDoor,ElevatorDoorContext
 		
 		
 		
@@ -25,7 +26,6 @@ public class Main {
 		
 		ElevatorSytem es= new ElevatorSytem(floors);
 		
-
 		
 		
 		//format  ==>es.simulateelevator(floorch, elevatorno,destno);
