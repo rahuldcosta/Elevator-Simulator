@@ -11,9 +11,9 @@ public class OpenDoor extends State {
 
 	@Override
 	public void switchState(ElevatorDoorContext context) {
-		CloseDoor o = new CloseDoor();
-		context.setState(o);
-		System.out.println("Door is  " + o.getStateName()+" ..........");
+		//CloseDoor o = new CloseDoor();
+		context.setState(context.getcloseins());
+		System.out.println("Door is  " + context.getcloseins().getStateName()+" ..........");
 		// TODO Auto-generated method stub
 
 	}
