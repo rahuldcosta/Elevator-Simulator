@@ -9,7 +9,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		//Puller
+		//Puller Now
 		//Design Patterns
 		//Design Pattern :- Classes Participating in The Design Pattern
 //		1.State:- ElevatorDoorContext,State,OpenDoor,CLoseDoor
