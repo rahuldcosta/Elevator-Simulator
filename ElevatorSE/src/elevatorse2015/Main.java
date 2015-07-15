@@ -16,6 +16,7 @@ public class Main {
 //		2.Composite :- Floor,FloorBttonPanel
 //		3.Facade:- ElevatorSystem,Elevator,Floor
 	  //4.Singleton:- OpenDoor,CloseDoor,ElevatorDoorContext
+		//Demo
 		
 		
 		
